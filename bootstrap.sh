@@ -242,8 +242,12 @@ echo_green "You can now start developing on rahat-platform! Happy coding! 🚀"
 echo -n "Do you want to setup Rahat Project AA? (y/n) "
 read answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
-  echo_green "Setting up Rahat Project AA..."
-  echo_yellow "This will run the setup script for Rahat Project AA which will deploy the necessary contracts and subgraph for the project. This may take a few minutes..."
+  echo_blue "Setting up Rahat Project Triggers..."
+  source triggersBootstrap.sh
+  echo_green "Setting up Rahat Project Triggers Completed..."
+  echo_blue "Setting up Rahat Project AA..."
+  source aaBootstrap.sh
+  echo_green "Setting up Rahat Project AA Completed..."
   sleep 3
   echo_green "Rahat Project AA setup completed successfully."
 else

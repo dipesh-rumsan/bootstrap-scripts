@@ -87,16 +87,8 @@ migrate_seed() {
   echo_blue "Running database migrations and seeding data..."
   pnpm prisma:generate
   pnpm migrate:dev
-  pnpm seed:eldevsettings $current_dir
-  pnpm seed:c2cdevsettings $current_dir
-  pnpm seed:aadevsettings $current_dir
-  pnpm seed:cvadevsettings $current_dir
-  pnpm seed:rpdevsettings $current_dir
-  pnpm seed:kenyadevsettings $current_dir
-  pnpm seed:cambodiadevsettings $current_dir
-  pnpm seed:chainsettings
-  npx ts-node prisma/seed.communication-settings.ts
-  npx ts-node prisma/seed.offramp.ts
+    #   need to run all of the migrations
+
   sleep 3
   echo_green "Database migrations and seeding completed successfully."
   sleep 2
