@@ -133,3 +133,4 @@ echo -e "${NC}"
 echo_green "You can now start developing on Rahat Project Triggers! Happy coding! 🚀"
 
 cd .. || exit
+
