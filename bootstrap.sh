@@ -205,6 +205,9 @@ echo_green "\nDevelopment environment setup completed successfully.\n"
 contract_setup
 graph_setup
 
+echo_blue "Waiting for graph to deploy..."
+sleep 10
+
 # Green color
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
