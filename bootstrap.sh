@@ -243,10 +243,11 @@ echo -n "Do you want to setup Rahat Project AA? (y/n) "
 read answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
   echo_blue "Setting up Rahat Project Triggers..."
-  source triggersBootstrap.sh
+  curl -sSL https://raw.githubusercontent.com/dipesh-rumsan/bootstrap-scripts/main/triggersBootstrap.sh | bash
   echo_green "Setting up Rahat Project Triggers Completed..."
   echo_blue "Setting up Rahat Project AA..."
-  source aaBootstrap.sh
+
+  curl -sSL https://raw.githubusercontent.com/dipesh-rumsan/bootstrap-scripts/main/aaBootstrap.sh | bash
   echo_green "Setting up Rahat Project AA Completed..."
   sleep 3
   echo_green "Rahat Project AA setup completed successfully."

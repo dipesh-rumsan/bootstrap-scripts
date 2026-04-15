@@ -49,6 +49,8 @@ if [ ! -d "$triggers_path" ]; then
   read answer < /dev/tty
   if [[ "$answer" == "n" || "$answer" == "N" ]]; then
     echo_yellow "Exiting setup. You can run this script again after setting up Rahat Project Triggers."
+    echo_blue "To setup Rahat Project Triggers, run the following command:"
+    echo_blue "curl -sSL https://raw.githubusercontent.com/dipesh-rumsan/bootstrap-scripts/main/triggersBootstrap.sh | bash"
     return 2>/dev/null || exit 0
   fi
 fi
